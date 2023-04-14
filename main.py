@@ -22,9 +22,9 @@ pipe = StableDiffusionPipeline.from_pretrained(model_id, revision="main", torch_
 pipe.to(device)
 
 @app.get("/")
-def generate(prompt: str, Nprompt: str, inference: int): 
+def generate(prompt: str, Nprompt: str, inference: int, width: int, height: int): 
     with autocast(device): 
-        image = pipe(prompt=[prompt] * 2, negative_prompt=[Nprompt] * 2, guidance_scale=8.5, num_inference_steps=inference).images[0]
+        image = pipe(prompt=[prompt] * 2, negative_prompt=[Nprompt] * 2, width=width, height=height, guidance_scale=8.5, num_inference_steps=inference).images[0]
     image.show()
     image.save("testimage.png")
     buffer = BytesIO()
