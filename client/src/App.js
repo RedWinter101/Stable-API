@@ -48,7 +48,7 @@ const App = () => {
             onChange={(e) => updatePrompt(e.target.value)}
             width={"350px"}
           ></Input>
-          <Button onClick={(e) => generate()} colorScheme={"blue"}>
+          <Button onClick={(e) => generate()} colorScheme={"blue"} isDisabled={!prompt + !Nprompt + !inference + !width + !height}>
             Generate
           </Button>
           <Input
