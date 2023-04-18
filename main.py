@@ -33,12 +33,4 @@ def generate(prompt: str, Nprompt: str, inference: int, width: int, height: int)
 
     return Response(content=imgstr, media_type="image/png")
 
-  
-import nest_asyncio
-from pyngrok import ngrok
-import uvicorn
-!ngrok config add-authtoken 2OOjnLNtbhW4HOD69RcZtMloWbP_3Jm6hbLi3DN2StK9dZK37
-ngrok_tunnel = ngrok.connect(8000)
-print('Public URL:', ngrok_tunnel.public_url)
-nest_asyncio.apply()
-uvicorn.run(app, port=8000)
+# to run app -- uvicorn api:app --reload --port 3000
