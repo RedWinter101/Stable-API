@@ -14,6 +14,7 @@ import {
 import axios from "axios";
 import { useState } from "react";
 
+
 const App = () => {
   const [image, updateImage] = useState();
   const [prompt, updatePrompt] = useState("");
@@ -47,7 +48,7 @@ const App = () => {
             onChange={(e) => updatePrompt(e.target.value)}
             width={"350px"}
           ></Input>
-          <Button onClick={(e) => generate()} colorScheme={"yellow"}>
+          <Button onClick={(e) => generate()} colorScheme={"blue"}>
             Generate
           </Button>
           <Input
@@ -55,27 +56,6 @@ const App = () => {
             placeholder="Negative Prompt"
             onChange={(e) => updateNPrompt(e.target.value)}
             width={"350px"}
-            required={true}
-          ></Input>
-          <Input
-            value={inference}
-            placeholder="Sampling Steps"
-            onChange={(e) => updateSamplingSteps(e.target.value)}
-            width={"100px"} 
-            required={true}
-          ></Input>
-          <Input
-            value={width}
-            placeholder="Width"
-            onChange={(e) => updateWidth(e.target.value)}
-            width={"100px"} 
-            required={true}
-          ></Input>
-          <Input
-            value={height}
-            placeholder="Height"
-            onChange={(e) => updateHeight(e.target.value)}
-            width={"100px"} 
             required={true}
           ></Input>
         </Wrap>
@@ -90,9 +70,37 @@ const App = () => {
           //<Image src={require("./lgs/Images8.png")} boxShadow="lg" />
           <Image src={`data:image/png;base64,${image}`} boxShadow="lg" />
         ) : null}
+        
+        <Wrap className="btn" marginTop={"10px"}>
+          <Input 
+            margin={"5px"}
+            value={inference}
+            placeholder="Steps"
+            onChange={(e) => updateSamplingSteps(e.target.value)}
+            width={"105px"} 
+            required={true}
+          ></Input>
+          <Input
+            margin={"5px"}
+            value={width}
+            placeholder="Width"
+            onChange={(e) => updateWidth(e.target.value)}
+            width={"105px"} 
+            required={true}
+          ></Input>
+          <Input
+            margin={"5px"}
+            value={height}
+            placeholder="Height"
+            onChange={(e) => updateHeight(e.target.value)}
+            width={"105px"} 
+            required={true}
+          ></Input>
+        </Wrap>
       </Container>
     </ChakraProvider>
   );
 };
 
 export default App;
+
