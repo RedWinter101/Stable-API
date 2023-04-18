@@ -35,11 +35,11 @@ const App = () => {
   return (
     <ChakraProvider>
       <Container>
-        <Heading>Stable DIffusion🚀</Heading>
+        <Heading>Stable DIffusion🖼️</Heading>
         <Text marginBottom={"10px"}>
-          This react application leverages the model trained by Stability AI and
-          Runway ML to generate images using the Stable Diffusion Deep Learning
-          model. 
+          This react application leverages the model trained by SG161222
+          to generate images using the Stable Diffusion Deep Learning
+          model.
         </Text>
         <Wrap marginBottom={"10px"}>
           <Input
