@@ -64,8 +64,6 @@ const App = () => {
             <SkeletonText />
           </Stack>
         ) : image ? (
-          //<Image src={`data:image/png;base64,${image}`} boxShadow="lg" />
-          //<Image src={require("./lgs/Images8.png")} boxShadow="lg" />
           <Image src={`data:image/png;base64,${image}`} boxShadow="lg" />
         ) : null}
         
