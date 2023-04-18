@@ -56,7 +56,6 @@ const App = () => {
             placeholder="Negative Prompt"
             onChange={(e) => updateNPrompt(e.target.value)}
             width={"350px"}
-            required={true}
           ></Input>
         </Wrap>
 
@@ -78,7 +77,6 @@ const App = () => {
             placeholder="Steps"
             onChange={(e) => updateSamplingSteps(e.target.value)}
             width={"105px"} 
-            required={true}
           ></Input>
           <Input
             margin={"5px"}
@@ -86,7 +84,6 @@ const App = () => {
             placeholder="Width"
             onChange={(e) => updateWidth(e.target.value)}
             width={"105px"} 
-            required={true}
           ></Input>
           <Input
             margin={"5px"}
@@ -94,7 +91,6 @@ const App = () => {
             placeholder="Height"
             onChange={(e) => updateHeight(e.target.value)}
             width={"105px"} 
-            required={true}
           ></Input>
         </Wrap>
       </Container>
