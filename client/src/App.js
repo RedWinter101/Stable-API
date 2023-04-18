@@ -14,7 +14,6 @@ import {
 import axios from "axios";
 import { useState } from "react";
 
-
 const App = () => {
   const [image, updateImage] = useState();
   const [prompt, updatePrompt] = useState("");
